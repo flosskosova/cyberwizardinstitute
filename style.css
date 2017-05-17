@@ -1,0 +1,69 @@
+body{
+font-family: Ubuntu Mono, Open Sans, monaco, sans-serif;
+color: #FFFFFF;
+background-color: #966bf5;
+}
+h1 {
+  font-size: 50px;
+  margin-top: 0px;
+}
+p {font-size: 24px;
+line-height: 24px;
+}
+.top {
+  display: flex;
+  align-items: center;
+  max-width: 800px;
+}
+.top .left {
+  display: inline-block;
+  max-width: 50%;
+}
+.top .right {
+  display: inline-block;
+}
+.top a:link, .top a:visited {
+  color: rgb(255,210,235);
+}
+.top .time {
+  color: white;
+  text-shadow: 1px 1px 8px deeppink;
+}
+
+div.body{
+  width: 50%;
+  background-color: #5a8be6;
+  margin: 0.7em 0;
+  padding: 1em;
+  border: 1em;
+border-style: solid;
+    border-color: #3c6991;}
+li {
+text-align: left;
+font-size: 24px;
+line-height: 24px;
+
+}
+.notice {
+  width: 50%;
+  font-size: 1.2em;
+}
+
+#webring button {
+  background-color: transparent;
+  border-width: 0px;
+  color: white;
+  cursor: pointer;
+}
+
+#webring {
+  font-size: 2em;
+}
+
+#webring .flex * {
+  vertical-align: middle;
+  text-align: center;
+}
+#course-materials-table td:nth-child(2), #course-materials-table td:nth-child(3) {
+    text-align: right;
+}
