@@ -1,0 +1,30 @@
+#!/usr/bin/env python3
+import sys
+import re
+import csv
+from urllib.parse import parse_qs
+
+def parse_qs_as_dict(qs):
+    d = {}
+    for k, v in parse_qs(qs).items():
+        d[k] = v[0]
+    return d
+
+formresponse = re.compile(r'GET /apply.txt\?(.+) HTTP/1.1$')
+fieldnames = (
+    'name',
+    'email-address',
+    'background',
+    'experience',
+    'learn',
+    'operating-system',
+    'entire-course',
+)
+
+w = csv.DictWriter(sys.stdout, fieldnames=fieldnames)
+w.writeheader()
+for line in sys.stdin:
+    m = re.match(formresponse, line)
+    if m:
+        w.writerow(parse_qs_as_dict(m.group(1)))
+
