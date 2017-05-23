@@ -10,7 +10,7 @@ def parse_qs_as_dict(qs):
         d[k] = v[0]
     return d
 
-formresponse = re.compile(r'GET /apply.txt\?(.+) HTTP/1.1$')
+formresponse = re.compile(r'GET /apply.html\?(.+) HTTP/1.1$')
 fieldnames = (
     'name',
     'email-address',
